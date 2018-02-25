@@ -41,10 +41,10 @@ tomatoCount = countTomatoes(pizza)
 magic_numbers = limpar_caracter(magic_numbers)
 
 
-n_rows = magic_numbers[0]
-n_columns = magic_numbers[1]
-minimum_ingredients = magic_numbers[2]
-maximum_cells = magic_numbers[3]
+n_rows = int(magic_numbers[0])
+n_columns = int(magic_numbers[1])
+minimum_ingredients = int(magic_numbers[2])
+maximum_cells = int(magic_numbers[3])
 
 
 def cria_matriz(lista,n_colunas):

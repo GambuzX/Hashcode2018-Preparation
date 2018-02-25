@@ -1,25 +1,74 @@
-input_file = open("example.in").read()
+input_file = open("big.in")  # open file
+first_line = input_file.readline()  # read the first line
+magic_numbers = first_line.split(" ")  # separate the numbers by whitespaces
+input_file.close()  # close file
 
-magic_numbers = [int(x) for x in input_file if x.isdigit()]
-
-n_rows = magic_numbers[0]
-n_columns = magic_numbers[1]
-minimum_ingredients = magic_numbers[2]
-maximum_cells = magic_numbers[3]
+input_file = open("big.in").read()
 
 pizza = [x for x in input_file if x.isalpha()]
-
-slices = []
-
-# Attempting slicing of pizza
-# The following loop returns a list of lists, each containing the ingredients in each column.
-# It works by slicing the pizza vertically, but doesn't take into account the height of the pizza.
-i = 0
-
-while i < len(pizza) - 10:
-    slices.append(pizza[i::4 + 1])
-    i = i + 1
-
-# Debug area, remove on release
-print(input_file, slices, sep="\n")
 print(pizza)
+
+
+def limpar_caracter(lista):
+    i = 1
+    tamanho = len(lista) - 1
+    ultimo = lista[tamanho]
+    numero = ultimo[0]
+
+    while i < tamanho:
+        if ultimo[i] == '\n':
+            lista.pop()
+            lista.append(numero)
+            break
+
+        numero = numero+ultimo[i]
+        i += 1
+
+    return lista
+
+
+def count_mushrooms(array): #counts the total number of mushrooms
+    counter = 0
+    for x in array:
+        if x == "M":
+            counter += 1
+    return counter
+
+
+def count_tomatoes(array): #counts the total number of tomatoes
+    counter = 0
+    for x in array:
+        if x == "T":
+            counter += 1
+    return counter
+
+mushroomCount = count_mushrooms(pizza)
+tomatoCount = count_tomatoes(pizza)
+magic_numbers = limpar_caracter(magic_numbers)
+
+
+n_rows = int(magic_numbers[0])
+n_columns = int(magic_numbers[1])
+minimum_ingredients = int(magic_numbers[2])
+maximum_cells = int(magic_numbers[3])
+
+
+def cria_matriz(lista,n_colunas):
+    contador = 0
+    matriz = []
+    linha = []
+
+    for i in lista:
+        if contador == n_colunas:
+            matriz.append(linha)
+            contador = 1
+            linha = [i]
+
+        else:
+            linha.append(i)
+            contador += 1
+
+    matriz.append(linha)
+    return matriz
+
+pizza_matriz = cria_matriz(pizza, n_columns)

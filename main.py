@@ -67,6 +67,6 @@ def cria_matriz(lista, n_colunas):
 
 
 
-pizza_matriz = cria_matriz(pizza, 5)
+pizza_matriz = cria_matriz(pizza, n_columns)
 
 print(pizza_matriz)

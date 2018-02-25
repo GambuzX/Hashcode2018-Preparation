@@ -4,9 +4,6 @@ first_line = input_file.readline()
 
 magic_numbers = first_line.split(" ")
 
-print(first_line)
-print(thisline)
-
 i=1
 ultimo=magic_numbers[3]
 numero=ultimo[0]
@@ -26,9 +23,3 @@ def limpar_caracter(lista):
 
 
 
-
-
-
-
-lastnumber=thisline[3]
-thisline.pop()

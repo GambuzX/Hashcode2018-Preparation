@@ -21,5 +21,16 @@ def limpar_caracter(lista):
         i+=1
 
 
+i=1
+tamanho=magic_numbers.__len__()-1
+ultimo=magic_numbers[tamanho]
+numero=ultimo[0]
+while i<tamanho:
+    if ultimo[i] == '\n':
+        magic_numbers.pop()
+        magic_numbers.append(ultimo[i])
+        break
+    numero=numero+ultimo[i]
+    i+=1
 
 

@@ -10,17 +10,17 @@ print (pizza)
 
 def limpar_caracter(lista):
     i=1
-    tamanho=lista.length-1
+    tamanho=lista.__len__()-1
     ultimo=lista[tamanho]
     numero=ultimo[0]
-    while True:
+    while i<tamanho:
         if ultimo[i] == '\n':
             lista.pop()
-            lista.append(ultimo[i])
+            lista.append(numero)
             break
         numero=numero+ultimo[i]
         i+=1
-    return numero
+    return lista
 
 def countMushrooms(array): #counts the total number of mushrooms
     counter = 0
@@ -38,7 +38,7 @@ def countTomatoes(array): #counts the total number of tomatoes
 
 mushroomCount = countMushrooms(pizza)
 tomatoCount = countTomatoes(pizza)
-# magic_numbers = limpar_caracter(magic_numbers)
+magic_numbers = limpar_caracter(magic_numbers)
 
 
 n_rows = magic_numbers[0]
@@ -66,4 +66,4 @@ def cria_matriz(lista,n_colunas):
 
 
 
-pizza_matriz=cria_matriz(pizza, 5)
+pizza_matriz=cria_matriz(pizza, n_columns)

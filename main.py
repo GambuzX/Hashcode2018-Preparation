@@ -60,6 +60,8 @@ def cria_matriz(lista,n_colunas):
         else:
             linha.append(i)
             contador+=1
+
+    matriz.append(linha)
     return matriz
 
 

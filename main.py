@@ -9,17 +9,17 @@ pizza = [x for x in input_file if x.isalpha()]
 print (pizza)
 
 def limpar_caracter(lista):
-    i=1
-    tamanho=lista.length-1
-    ultimo=lista[tamanho]
-    numero=ultimo[0]
+    i = 1
+    tamanho = lista.length-1
+    ultimo = lista[tamanho]
+    numero = ultimo[0]
     while True:
         if ultimo[i] == '\n':
             lista.pop()
             lista.append(ultimo[i])
             break
-        numero=numero+ultimo[i]
-        i+=1
+        numero = numero + ultimo[i]
+        i += 1
     return numero
 
 def countMushrooms(array): #counts the total number of mushrooms
@@ -47,21 +47,24 @@ minimum_ingredients = magic_numbers[2]
 maximum_cells = magic_numbers[3]
 
 
-def cria_matriz(lista,n_colunas):
-    contador=0
-    matriz=[]
-    linha=[]
+def cria_matriz(lista, n_colunas):
+    contador = 0
+    matriz = []
+    linha = []
+
     for i in lista:
-        if contador==n_colunas:
+        if contador == n_colunas:
             matriz.append(linha)
-            contador=1
-            linha=[i]
+            contador = 1
+            linha = [i]
 
         else:
             linha.append(i)
-            contador+=1
-    return matriz
+            contador += 1
+    return matriz.append(linha)
 
 
 
-pizza_matriz=cria_matriz(pizza, 5)
+pizza_matriz = cria_matriz(pizza, 5)
+
+print(pizza_matriz)

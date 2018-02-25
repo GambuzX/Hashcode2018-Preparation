@@ -12,4 +12,23 @@ input_file.close() # close file
 input_file = open("example.in").read()
 
 pizza = [x for x in input_file if x.isalpha()]
-print (pizza)
+print (maximum_cells)
+
+def countMushrooms(array):
+    counter = 0
+    for x in array:
+        if x == "M":
+            counter += 1
+    return counter
+
+def countTomatoes(array):
+    counter = 0
+    for x in array:
+        if x == "T":
+            counter += 1
+    return counter
+
+mushroomCount = countMushrooms(pizza)
+tomatoCount = countTomatoes(pizza)
+
+print (mushroomCount, tomatoCount)

@@ -22,4 +22,4 @@ while i < len(pizza) - 10:
 
 # Debug area, remove on release
 print(input_file, slices, sep="\n")
-print (pizza)
+print(pizza)

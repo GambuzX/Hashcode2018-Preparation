@@ -38,10 +38,29 @@ def countTomatoes(array): #counts the total number of tomatoes
 
 mushroomCount = countMushrooms(pizza)
 tomatoCount = countTomatoes(pizza)
-magic_numbers = limpar_caracter(magic_numbers)
+# magic_numbers = limpar_caracter(magic_numbers)
 
 
 n_rows = magic_numbers[0]
 n_columns = magic_numbers[1]
 minimum_ingredients = magic_numbers[2]
 maximum_cells = magic_numbers[3]
+
+
+def cria_matriz(lista,n_colunas):
+    contador=0
+    matriz=[]
+    linha=[]
+    for i in lista:
+        if contador==n_colunas:
+            matriz.append(linha)
+            contador=0
+            linha=[]
+
+        else:
+            linha.append(i)
+    return matriz
+
+
+
+pizza_matriz=cria_matriz(pizza, 5)

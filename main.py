@@ -26,3 +26,20 @@ def limpar_caracter(lista):
             break
         numero=numero+ultimo[i]
         i+=1
+
+def countMushrooms(array): #counts the total number of mushrooms
+    counter = 0
+    for x in array:
+        if x == "M":
+            counter += 1
+    return counter
+
+def countTomatoes(array): #counts the total number of tomatoes
+    counter = 0
+    for x in array:
+        if x == "T":
+            counter += 1
+    return counter
+
+mushroomCount = countMushrooms(pizza)
+tomatoCount = countTomatoes(pizza)

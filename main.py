@@ -54,11 +54,12 @@ def cria_matriz(lista,n_colunas):
     for i in lista:
         if contador==n_colunas:
             matriz.append(linha)
-            contador=0
-            linha=[]
+            contador=1
+            linha=[i]
 
         else:
             linha.append(i)
+            contador+=1
     return matriz
 
 

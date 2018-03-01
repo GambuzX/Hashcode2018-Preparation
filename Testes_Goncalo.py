@@ -109,10 +109,10 @@ def cut_direction():
     else:
         return False
 
-if cut_direction():
-    cut_vertically()
-else:
-    cut_horizontally()
+# if cut_direction():
+#     cut_vertically()
+# else:
+#     cut_horizontally()
 
 # Debug zone
 print(pizza_matrix, pizza_matrix[0][0], sep="\n")

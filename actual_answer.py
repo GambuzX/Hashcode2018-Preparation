@@ -1,5 +1,5 @@
 # Open file
-file = open('example.in')
+file = open('big.in')
 first_line = file.readline()
 
 # Save all magic numbers in a tuple by cutting the first line as soon as a whitespace is found
@@ -46,3 +46,10 @@ for r in range(row_count):
             mushroom_count = 0
 
 print(grid, results, sep="\n")
+
+output = open(".out", "w+")
+length = len(results)
+
+output.write(str(length) + "\n")
+for i in range(length):
+    output.write(' '.join(str(x) for x in results[i]) + "\n")
